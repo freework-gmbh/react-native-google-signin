@@ -288,9 +288,9 @@ public class RNGoogleSigninModule extends ReactContextBaseJavaModule {
 
         GoogleSignInOptions.Builder googleSignInOptionsBuilder = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestScopes(new Scope("email"), _scopes);
         if (webClientId != null && !webClientId.isEmpty()) {
-            if (!offlineAcess) {
+          googleSignInOptionsBuilder.requestIdToken(webClientId);
                 googleSignInOptionsBuilder.requestIdToken(webClientId);
-            } else {
+            if (offlineAcess) {
                 googleSignInOptionsBuilder.requestServerAuthCode(webClientId, forceConsentPrompt);
             }
         }
