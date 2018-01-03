@@ -1,6 +1,6 @@
 {
   "name": "@freework/react-native-google-signin",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "Google Signin for your react native applications",
   "main": "index.js",
   "author": {
